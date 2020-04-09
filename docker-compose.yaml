@@ -1,0 +1,14 @@
+---
+version: "3"
+services:
+  firetv:
+    image: firetv_status
+    container_name: firetv
+    environment:
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - /some/path/on/host:/app
+    ports:
+      - 5000:5000
+    restart: unless-stopped
