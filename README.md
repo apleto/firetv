@@ -1,8 +1,9 @@
 # firetv
 A simply Python Flask server to determine which app is running on a Fire TV.
 
-This script accesses a Fire TV using ADB and execute ADB shell scripts to determine which app is running.  You'll need to have your "adbkey" and "adbkey.pub" files in order to authenticate to the Fire TV.  Check out the following lin for more information on how to access the Fire TV using ADB.
+This script accesses a Fire TV using ADB and execute ADB shell scripts to determine which app is running.  You'll need to have your "adbkey" and "adbkey.pub" files in order to authenticate to the Fire TV.  These files should be located in the directory that you're mapping to "/app" in the container.
 
+Check out the following link for more information on how to access the Fire TV using ADB.
 https://developer.amazon.com/docs/fire-tv/connecting-adb-to-device.html
 
 As it is you'll need to edit firetv.py so that the IP address for your fire tv is present.  Then build the container like this:
