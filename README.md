@@ -20,3 +20,28 @@ You can also use the docker-compose file to run the container like this:
 ```
 docker-compose -f docker-compose.yaml up -d
 ```
+
+Once the server is up and running you can use CURL to send a GET request and test it out:
+```
+curl -v http://server:5000/state
+```
+
+Should return:
+```
+* TCP_NODELAY set
+* Connected to home-pi (10.128.2.92) port 5000 (#0)
+> GET /state HTTP/1.1
+> Host: home-pi:5000
+> User-Agent: curl/7.58.0
+> Accept: */*
+>
+* HTTP 1.0, assume close after body
+< HTTP/1.0 200 OK
+< Content-Type: application/json
+< Content-Length: 95
+< Server: Werkzeug/1.0.1 Python/3.8.2
+< Date: Thu, 09 Apr 2020 02:24:59 GMT
+<
+{"activity":"com.amazon.tv.launcher.ui.HomeActivity_vNext","package":"com.amazon.tv.launcher"}
+* Closing connection 0
+```
