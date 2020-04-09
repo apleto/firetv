@@ -29,9 +29,9 @@ curl -v http://server:5000/state
 Should return:
 ```
 * TCP_NODELAY set
-* Connected to home-pi (10.128.2.92) port 5000 (#0)
+* Connected to server (10.10.10.10) port 5000 (#0)
 > GET /state HTTP/1.1
-> Host: home-pi:5000
+> Host: server:5000
 > User-Agent: curl/7.58.0
 > Accept: */*
 >
